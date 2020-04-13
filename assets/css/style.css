@@ -16,7 +16,7 @@ body {
 
 aside { display: none;}
 
-#title1 {
+#title1, #title2 {
     font-size: 3.5em;
     font-weight: 400;
 }
@@ -69,4 +69,23 @@ footer p {
 
 main p {
     margin: 20px 0px;
+}
+
+@media only screen and (min-width: 600px) {
+    main {
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    body {
+        padding: 160px 0px;
+    }
+
+    #title1 { display: none;}
+
+    #title2 { 
+        display: inline;
+        font-size: 4em;
+        font-weight: 500;
+    }
 }
