@@ -71,21 +71,140 @@ main p {
     margin: 20px 0px;
 }
 
+/* MEDIA QUERRIES */
+
+@media only screen and (min-width: 500px) {
+    body {
+        padding: 50px 0px;
+        margin: 0px 50px;
+    }
+    
+    #title1, #title2 {
+        font-size: 3.8em;
+        line-height: 1.2em;
+    }
+
+    article h2 {
+        font-size: 2em;
+        line-height: 1.2em;
+    }
+
+    article p {
+        line-height: 1.5em;
+    }
+}
+
 @media only screen and (min-width: 600px) {
+
+    body {
+        margin: 0 auto;
+        padding: 0;
+    }
+
     main {
         display: flex;
         flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+    aside {
+        max-width: 1400px;
+        margin: 0 auto;
+        margin-bottom: 100px;
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    aside h2 {
+        flex-shrink: 0;
+        width: 100%;
+        margin-bottom: 50px;
+        font-size: 2em;
+    }
+
+    aside hr:after {
+        position: absolute;
+        border-bottom: 2px solid black;
+    }
+
+    aside img {
+        display: inline-block;
+        width: 33%;
+        flex-basis: 33%;
+    }
+
+    footer {
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+    .imgBox {
+        width: 42%;
+        margin-left: 16%;
+    }
+
+    main img {
+        display: inline-block;
+        width: 100%;
+    }
+
+    main article {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: space-around;
+        margin-bottom: 100px;
+    }
+
+    .infoProd {
+        width: 42%;
+    }
+
+    main article:nth-child(even) {
+        flex-flow: row-reverse wrap;
+    }
+
+    main article:nth-child(even) .imgBox {
+        margin-left: 0;
+        margin-right: 16%
     }
 
     body {
         padding: 160px 0px;
     }
 
+    #pj6 {
+        display: flex;
+    }
+
     #title1 { display: none;}
 
     #title2 { 
-        display: inline;
+        display: inline-block;
         font-size: 4em;
         font-weight: 500;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    #title2 { 
+        font-size: 4.5em;
+    }
+
+    article h2 {
+        font-size: 3em;
+    }
+
+    aside h2 {
+        font-size: 3em;
+    }
+
+    article p {
+        font-size: 1.3em;
     }
 }
